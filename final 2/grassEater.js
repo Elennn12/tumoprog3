@@ -1,4 +1,4 @@
-class GrassEater {
+/*class GrassEater {
 
     constructor(x, y, index) {
         this.x = x;
@@ -114,4 +114,49 @@ class GrassEater {
             }
         }
     }
-}
+}*/
+
+class GrassEater extends LivingCreature {
+
+    constructor(x, y, index){
+    
+    super(x, y, index);
+    this.energy = 8;
+    
+    }
+    
+    getNewCoordinates() {
+    
+    this.directions = [
+    
+    [this.x - 1, this.y - 1],
+    
+    [this.x, this.y - 1],
+    
+    [this.x + 1, this.y - 1],
+    
+    [this.x - 1, this.y],
+    
+    [this.x + 1, this.y],
+    
+    [this.x - 1, this.y + 1],
+    
+    [this.x, this.y + 1],
+    
+    [this.x + 1, this.y + 1]
+    
+    ];
+    
+    }
+    
+    chooseCell(character) {
+    
+    this.getNewCoordinates();
+    
+    return super.chooseCell(character);
+    
+    }
+    
+    // eat, mul, move, die
+    
+    }
