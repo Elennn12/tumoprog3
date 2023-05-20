@@ -48,8 +48,8 @@
     }
 
 }*/
-
-class Grass extends LivingCreature {
+var LivingCreature = require("./living.js")
+module.exports = class Grass extends LivingCreature {
 
     mul() {
 

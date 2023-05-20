@@ -29,10 +29,10 @@ let grassEaterArr = []
 let GishatichArr = []
 let hunterArr = []
 let terroristArr =[]
-function setup() {
+/*function setup() {
     frameRate(10);
     createCanvas(matrix[0].length * side, matrix.length * side);
-    background('#acacac');
+    background('#acacac');}*/
     
     for (let y = 0; y < matrix.length; y++) {
         for (let x = 0; x < matrix[y].length; x++) {
@@ -60,7 +60,7 @@ function setup() {
         }
 
     }
-}
+
 
 function draw() {
 
