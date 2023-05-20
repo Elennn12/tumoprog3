@@ -1,7 +1,13 @@
-// var LivingCreature = require("./living.js")
-module.exports = class Gishatich {
+ var LivingCreature = require("./living.js")
+module.exports = class Gishatich extends LivingCreature{
 
     constructor(x, y, index) {
+
+        super(x, y, index);
+        this.energy = 15;
+
+    }
+    /*constructor(x, y, index) {
         this.x = x;
         this.y = y;
         this.index = index;
@@ -18,7 +24,7 @@ module.exports = class Gishatich {
         ];
 
 
-    }
+    }*/
     getNewCoordinates() {
         this.directions = [
             [this.x - 1, this.y - 1],
@@ -31,7 +37,15 @@ module.exports = class Gishatich {
             [this.x + 1, this.y + 1]
         ];
     }
+
     chooseCell(character) {
+
+        this.getNewCoordinates();
+
+        return super.chooseCell(character);
+
+    }
+    /*chooseCell(character) {
         var found = [];
         for (var i in this.directions) {
             var x = this.directions[i][0];
@@ -46,7 +60,7 @@ module.exports = class Gishatich {
         }
         return found;
 
-    }
+    }*/
 
     mul() {
         var newCell = random(this.chooseCell(0));

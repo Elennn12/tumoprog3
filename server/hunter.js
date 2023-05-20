@@ -1,6 +1,9 @@
-class Hunter {
 
-    constructor(x, y, index) {
+var LivingCreature = require("./living.js")
+
+module.exports = class Hunter extends LivingCreature {
+
+    /*constructor(x, y, index) {
         this.x = x;
         this.y = y;
         this.index = index;
@@ -17,6 +20,15 @@ class Hunter {
         ];
 
 
+    }*/
+
+
+
+    constructor(x, y, index) {
+
+        super(x, y, index);
+        this.energy = 15;
+
     }
     getNewCoordinates() {
         this.directions = [
@@ -30,7 +42,7 @@ class Hunter {
             [this.x + 1, this.y + 1]
         ];
     }
-    chooseCell(character) {
+    /*chooseCell(character) {
         var found = [];
         for (var i in this.directions) {
             var x = this.directions[i][0];
@@ -44,6 +56,14 @@ class Hunter {
 
         }
         return found;
+
+    }*/
+
+    chooseCell(character) {
+
+        this.getNewCoordinates();
+
+        return super.chooseCell(character);
 
     }
 

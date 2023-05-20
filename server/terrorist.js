@@ -1,6 +1,14 @@
-class Terrorist {
+var LivingCreature = require("./living.js")
 
+module.exports = class Terrorist extends LivingCreature{
     constructor(x, y, index) {
+
+        super(x, y, index);
+        this.energy = 15;
+
+    }
+
+    /*constructor(x, y, index) {
         this.x = x;
         this.y = y;
         this.index = index;
@@ -17,7 +25,7 @@ class Terrorist {
         ];
 
 
-    }
+    }*/
     getNewCoordinates() {
         this.directions = [
             [this.x - 1, this.y - 1],
@@ -78,7 +86,7 @@ class Terrorist {
 
     eat() {
 
-        let foods = this.chooseCell(3 && 4)
+        let foods = this.chooseCell(4)
         let food = random(foods)
         if (food) {
             this.energy++

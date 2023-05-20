@@ -19,6 +19,8 @@ console.log("Game is running on port 3000");
 var GrassEater= require("./grassEater")
 var Gishatich = require("./gishatich")
 var Grass = require("./grass")
+var Terrorist = require("./terrorist")
+var Hunter = require("./hunter")
 
 matrix = []
 function getRandInt(min,max){
