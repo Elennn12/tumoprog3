@@ -74,7 +74,7 @@ function createobject(){
     }
 }
 function game(){
-    /*for (var i in grassArr) {
+    for (var i in grassArr) {
         grassArr[i].mul();
     }
 
@@ -89,7 +89,7 @@ function game(){
     }
     for (var i in terroristArr) {
         terroristArr[i].eat();
-    }*/
+    }
 
   io.sockets.emit("my_matrix", matrix);
 }

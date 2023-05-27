@@ -1,8 +1,8 @@
 var socket = io()
 socket.on("my_matrix", my_draw)
 function setup() {
-    frameRate(10);
-    createCanvas(400, 400);
+    frameRate(30);
+    createCanvas(1000,1200);
     background('#acacac');
 } //client
 

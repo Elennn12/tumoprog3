@@ -54,8 +54,11 @@ module.exports = class Grass extends LivingCreature {
     mul() {
 
         this.multiply++;
-
-        var newCell = random(this.chooseCell(0));
+        
+        var harevan = this.chooseCell(0);
+        var newCell = harevan[Math.floor(Math.random()*harevan.length)]
+        
+        
 
         if (this.multiply >= 8 && newCell) {
 

@@ -22,7 +22,7 @@ var matrix = [
 ];
 
 
-var side = 10;
+var side = 50;
 
 let grassArr = []
 let grassEaterArr = []
