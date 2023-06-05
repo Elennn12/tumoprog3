@@ -60,7 +60,7 @@ module.exports = class Grass extends LivingCreature {
         
         
 
-        if (this.multiply >= 8 && newCell) {
+        if (this.multiply >= 7 && newCell) {
 
             var newGrass = new Grass(newCell[0], newCell[1], this.index);
 

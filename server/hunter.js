@@ -116,7 +116,7 @@ module.exports = class Hunter extends LivingCreature {
                     break;
                 }
             }
-            if (this.energy >= 5) {
+            if (this.energy >= 8) {
                 this.mul()
             }
         }
